@@ -1,0 +1,27 @@
+.about_page {
+    padding: 0px;
+    border-radius: 5px;
+}
+a {
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    margin: 20px 0;
+    background-color: rgb(108, 108, 108);
+}
+
+ul {
+    list-style-type: square;
+}
+
+.main {
+    background-color: #28242c;
+    padding: 20px;
+}

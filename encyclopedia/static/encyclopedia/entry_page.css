@@ -1,0 +1,20 @@
+.entry_page {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    margin: 20px 0;
+    background-color: rgb(108, 108, 108);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    background-color: #28242c;
+    padding: 20px;
+}

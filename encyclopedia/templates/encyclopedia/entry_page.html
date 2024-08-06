@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link href="{% static 'encyclopedia/entry_page.css' %}" rel="stylesheet">  <!-- Specific CSS for new_page.html -->
+{% endblock %}
+
+{% block title %} 
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    <div class="main col-lg-10 col-md-9">
+    <hr>
+        {{ content|safe }}
+    </div>
+{% endblock %}
+
+
+

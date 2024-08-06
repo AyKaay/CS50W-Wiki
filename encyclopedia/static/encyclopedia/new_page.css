@@ -1,0 +1,53 @@
+.new-page-form form {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form label, form textarea, form input{
+    color: rgb(255, 255, 255);
+}
+
+form input, form textarea {
+    background-color: #ffffff;
+    border: 1px solid #777;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+}
+
+form input[type="submit"] {
+    background-color: #006eff;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adjust the height of the content textarea */
+.form-group textarea {
+    height: 200px; /* Set a fixed height */
+    max-height: 800px; /* Set a maximum height */
+    min-height: 200px; /* Set a minimum height */
+    width: 100%;
+    resize: vertical; /* Allow vertical resizing */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"]:hover {
+    background-color: #006eff;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    margin: 20px 0;
+    background-color: rgb(108, 108, 108);
+}
+
+.main {
+    background-color: #28242c;
+    padding: 20px;
+}

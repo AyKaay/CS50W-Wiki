@@ -1,0 +1,63 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link href="{% static 'encyclopedia/index.css' %}" rel="stylesheet">  <!-- Specific CSS for new_page.html -->
+{% endblock %}
+
+{% block title %} 
+    Main Menu
+{% endblock %}
+
+{% block body %}
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1>Welcome to Our Wikipedia Mock-up</h1> 
+    <hr>
+    <br>
+
+    <h2> About This Project </h2>
+    <hr>
+    <p>
+        This Wikipedia mock-up is a project created as part of Harvard's CS50W course. 
+        The goal of this project is to provide a platform for learning and sharing knowledge on various topics, much like the real Wikipedia.
+        Here, users can create, edit, and browse articles on a wide range of subjects,
+         from programming languages to historical figures, and everything in between.
+    </p>
+    <br>
+
+    <h2>Features</h2>
+    <hr>
+    <ul class="intro-text">
+        <li><b>Comprehensive Articles: </b>Our platform hosts detailed articles on various topics, providing users with in-depth knowledge.</li>
+        <li><b>User Contributions: </b>Anyone can contribute by creating new articles or editing existing ones, fostering a collaborative learning environment.</li>
+        <li><b>Search Functionality: </b>Easily find articles using our intuitive search bar.</li>
+        <li><b>Random Article: </b>Explore something new with a click by viewing a random article.</li>
+    </ul>
+    <br>
+
+    <h2>Why This Project?</h2>
+    <hr>
+    <p>
+        Inspired by the structure and functionality of Wikipedia, 
+        this project serves as an educational tool to understand the workings of a content management system (CMS) and web development.
+         It showcases the application of Django, HTML, CSS, and providing hands-on experience in building and managing web applications.
+    </p>
+    <br>
+
+    <h2>Get Involved</h2>
+    <hr>
+    <p>
+        We encourage you to dive in and explore the articles available.
+         If you have knowledge to share, feel free to contribute by creating new pages or improving existing content.
+         Your contributions help make this a valuable resource for everyone.
+    <p>
+    <br>
+    <!--
+        <ul>
+            {% for entry in entries %}  
+            <li><a href="{% url 'entry_page' title=entry %}">{{entry}}</a></li>  
+            {% endfor %} 
+        </ul>  
+    </div>
+    -->
+{% endblock %} 

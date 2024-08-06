@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>  
+<html lang="en">  
+    <head>
+        {% block extra_css %}{% endblock %}  <!-- Additional CSS specific to each page -->
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  <!-- Bootstrap CSS for styling -->
+        <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid">
+        <div class="row"> 
+        <div class="col-sm-3 col-md-2 sidebar"> 
+            <h2><b><a href="{% url 'index' %}">Wikipedia Mock-up</a></b></h2>
+            <p>Harvard CS50W based Project<p>
+            <!-- search bar functionalities-->
+            <form action="{% url 'search' %}" method="get"> 
+                <input class="form-control form-control-sm" type="text" name="q" placeholder="Search Wikipedia">  
+                <button type="submit" class="btn btn-secondary btn-sm">Search</button>
+            </form>
+            <hr>
+            <!-- Navigation links -->
+            <nav class="sidebar_nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'new_page' %}">Create New Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'random_entry' %}">Random Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about_page' %}">About</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar footer -->
+            <footer class="sidebar_footer">
+                
+                <p>&copy; 2024 Wikipedia Mock-up</p>
+                <a href="https://github.com/AyKaay">More by Me!</a>
+                <a href="https://github.com/me50/AyKaay/blob/web50/projects/2020/x/wiki/README.md"> Code: Under the hood </a>
+            </footer>
+
+        </div>
+
+        <!-- Main content section taking 10 columns on large screens and 9 on medium screens -->
+        <div class="main col-lg-10 col-md-9">  
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>  <!-- End of the HTML document -->

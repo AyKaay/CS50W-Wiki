@@ -1,0 +1,116 @@
+/* General body styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #28242c;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.main {
+    margin-left: 10%; /* Matches the width of the sidebar */
+    padding: 20px;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+/* Sidebar styling */
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content */
+    border-right: 1px solid #eee;
+    background-color: #000000;
+    height: 100vh;
+    color: white;
+}
+
+/* Sidebar header styling */
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+.sidebar p {
+
+    color: grey;
+}
+
+/* Sidebar navigation links */
+.sidebar_nav {
+    color: white;
+    flex: 1;
+}
+
+.sidebar_nav a {
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+    padding-bottom: 5px; /* Spacing between links */
+    display: block;
+}
+
+.sidebar_nav a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* Horizontal rule (hr) styling inside sidebar */
+.sidebar hr {
+    border: none;
+    height: 1.5px;
+    margin: 20px 0;
+    background-color: rgb(172, 172, 172);
+}
+
+/* Sidebar footer styling */
+.sidebar_footer {
+    color: gray;
+    text-align: left;
+    margin-top: auto; /* This pushes the footer to the bottom */
+    padding-top: 20px;
+}
+
+.sidebar_footer a{
+    color: gray;
+    font-size: smaller;
+    text-decoration: none; /* Removes underline from links */
+    padding-bottom: 5px; /* Spacing between links */
+    display: block;
+}
+
+.sidebar_footer p{
+    color: gray;
+    text-decoration: none; /* Removes underline from links */
+    padding-bottom: 5px; /* Spacing between links */
+    display: block;
+}
+/*code {
+    white-space: pre;
+}*/
+
+/* Header styling 
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}*/
+
+/* Textarea styling 
+textarea {
+    height: 90vh;
+    width: 10%;
+}
+
+/* Search bar styling 
+.search {
+    width: 100%;
+    font-size: 1px;
+    line-height: 15px;
+    padding: 20px;
+}*/

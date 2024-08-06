@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link href="{% static 'encyclopedia/search_result.css' %}" rel="stylesheet">  <!-- Specific CSS for new_page.html -->
+{% endblock %}
+
+{% block title %} 
+    Search Result
+{% endblock %}
+
+{% block body %}
+    <div class="main col-lg-10 col-md-9">
+        <h1>Search result for "{{ query }}"</h1>
+        <hr>
+        <ul>
+            {% if entries %}
+                {% for entry in entries %}
+                    <li><a href="{% url 'entry_page' entry%}"><b>{{entry}}</b></a></li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}
